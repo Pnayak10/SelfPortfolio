@@ -1,79 +1,59 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, OnInit, AfterViewInit, AfterViewChecked, ViewChild, HostListener } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
 
 @Component({
   selector: 'header-app',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCardModule,FormsModule,ReactiveFormsModule],
   templateUrl: './header-app.component.html',
   styleUrl: './header-app.component.scss'
 })
-export class HeaderAppComponent implements AfterViewInit {
-  constructor() {
+export class HeaderAppComponent {
+  topMate: boolean = false;
+  isSticky: boolean = false;
+  contactForm: FormGroup | any;
 
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    this.isSticky = window.scrollY >= 70;
+    console.log("this.isSticky", this.isSticky,window.scrollY)
+  }
+  constructor(private fb: FormBuilder) {
+    this.contactForm = this.fb.group({
+      name: ['', [Validators.required]],
+      email: ['', [ Validators.email]],
+      phone: [''],
+      message: ['']
+    });
   }
 
-  exploreWork() {
-    alert("Let\'s explore!");
+  onSubmit() {
+    if (this.contactForm.valid) {
+      console.log('Form Data:', this.contactForm.value);
+      alert('Thank you for your message!');
+      this.contactForm.reset();
+    }
+  }
+
+
+
+
+letsConnect() {
+  this.topMate = true;
 }
-ngAfterViewInit(): void {
-  const canvas: HTMLCanvasElement = document.createElement('canvas');
-  document.querySelector('.animated-header')?.appendChild(canvas);
-  const ctx = canvas.getContext('2d');
-  canvas.width = window.innerWidth;
-  canvas.height = 100;
 
-  const particles: any[] = [];
-
-  class Particle {
-    x: number;
-    y: number;
-    size: number;
-    color: string;
-    velocityX: number;
-
-    constructor() {
-      this.x = Math.random() * canvas.width;
-      this.y = Math.random() * canvas.height;
-      this.size = Math.random() * 3;
-      this.color = 'rgba(255, 255, 255, 0.5)';
-      this.velocityX = Math.random() * 2 - 1;
-    }
-
-    update() {
-      this.x += this.velocityX;
-      if (this.x > canvas.width) this.x = 0;
-    }
-
-    draw() {
-      if (ctx) {
-        ctx.fillStyle = this.color;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.closePath();
-        ctx.fill();
-      }
-    }
-  }
-
-  function initParticles() {
-    for (let i = 0; i < 100; i++) {
-      particles.push(new Particle());
-    }
-  }
-
-  function animate() {
-    if (ctx) {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      particles.forEach((particle) => {
-        particle.update();
-        particle.draw();
-      });
-      requestAnimationFrame(animate);
-    }
-  }
-
-  initParticles();
-  animate();
+closeMe() {
+  console.log('close');
+  this.topMate = false;
 }
 }
  
