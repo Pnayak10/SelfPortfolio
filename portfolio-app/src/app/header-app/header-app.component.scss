@@ -472,6 +472,14 @@ background:linear-gradient(-120deg, #e50914, #221f1f, #f5f5f1);
 .skill-card:hover {
     background-color:#59b2f4;
     box-shadow: 0 0 20px #59b2f4;
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    transition: all 0.5s;
+
+    img,p {
+      transform: translate3d(0%, 0, 120px);
+      font-size: 24px;
+      transition: all 0.5s;
+    }
 }
 
 
@@ -711,9 +719,10 @@ visibility: visible;
 }
 
 .carrier-journey .card:hover{
-  transform: scale(1.1);
-  box-shadow: 0px 10px 20px rgba(119, 105, 105, 0.8);
   transition: height 0.6s, transform 0.6s;
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+
 }
 
 
@@ -737,7 +746,7 @@ visibility: visible;
 .about-me-content{
   display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-content: center;
     justify-content: center;
     align-items: center;
@@ -795,7 +804,11 @@ visibility: visible;
     margin: 0 auto;
     background: white;
     padding: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    transform: perspective(900px) translateY(-9%) rotateX(20deg) translateZ(0);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    left: -16px;
+    position: relative;
+    border-radius: 10px;
 }
 
 
@@ -901,6 +914,8 @@ visibility: visible;
   overflow:visible;
   transform: rotateY(360deg);
   transition: all 1s ease;
+  transform: perspective(900px) translateY(-5%) rotateX(-30deg) translateZ(0);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
 
   .asset-header img{
     transform: scale(.8);
@@ -1133,6 +1148,10 @@ textarea.animated-input {
   .animated-button {
     font-size: 14px;
   }
+
+  button.lets-connect {
+    left:0
+  }
 }
 
 
@@ -1180,6 +1199,21 @@ textarea.animated-input {
         }
       }
     }
+}
+
+
+@media only screen and (max-width: 696px) {
+  .planning {
+
+    .card-description {
+      display: none;
+    }
+
+    .last-plan-content {
+    left: 10%;
+    }
+  } 
+  
 }
 
 .curve-svg {
