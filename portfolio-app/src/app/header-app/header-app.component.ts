@@ -6,6 +6,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
+import { ContactMeComponent } from "../contact-me/contact-me.component";
+import { PlanningComponent } from '../planning/planning.component';
+import { ServicesComponent } from '../services/services.component';
+import { CarrierComponent } from "../carrier/carrier.component";
+import { AboutComponent } from "../about/about.component";
+import { SkillsComponent } from '../skills/skills.component';
 
 @Component({
   selector: 'header-app',
@@ -13,7 +19,7 @@ import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
   imports: [CommonModule, MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatCardModule,FormsModule,ReactiveFormsModule],
+    MatCardModule, FormsModule, ReactiveFormsModule, ContactMeComponent, PlanningComponent, ServicesComponent, CarrierComponent, AboutComponent,SkillsComponent],
   templateUrl: './header-app.component.html',
   styleUrl: './header-app.component.scss'
 })

@@ -1,0 +1,74 @@
+<section class="contact" id="contact">
+    <div>
+      <div class="service-logo"><img src="../../assets/backThumb.png" alt="service Avatar" style="height: 400px;width: 400px;" /></div>
+    </div>
+    <div class="contact-form-container">
+      <mat-card class="contact-card">
+        <h2>Contact Me</h2>
+        <div class="connect-logo"><img src="../../assets/contact.gif" alt="connect Avatar" /></div>
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="form-container">
+          <div class="input-container">
+            <input
+              id="name"
+              type="text"
+              formControlName="name"
+              class="animated-input"
+              placeholder="NAME"
+            />
+            <span class="focus-border"></span>
+          </div>
+          <div *ngIf="contactForm.get('name').invalid && contactForm.get('name').touched" class="error">
+            Name is required.
+          </div>
+        
+          <div class="input-container">
+            <input
+              id="email"
+              type="email"
+              formControlName="email"
+              class="animated-input"
+              placeholder="E-MAIL"
+            />
+            <span class="focus-border"></span>
+          </div>
+  
+          <div *ngIf="contactForm.get('email').invalid && contactForm.get('email').touched" class="error">
+            Valid email is required.
+          </div>
+  
+          <div class="input-container">
+            <input
+              id="phone"
+              type="tel"
+              formControlName="phone"
+              class="animated-input"
+              placeholder="CONTACT NUMBER"
+              pattern="[0-9]{10}"
+            />
+            <span class="focus-border"></span>
+          </div>
+          <div *ngIf="contactForm.get('phone').invalid && contactForm.get('phone').touched" class="error">
+            Valid phone number is required.
+          </div>
+         
+        
+          <div class="input-container">
+            <textarea
+              id="message"
+              formControlName="message"
+              class="animated-input"
+              placeholder="Enter your message"
+            ></textarea>
+            <span class="focus-border"></span>
+          </div>
+          <div *ngIf="contactForm.get('message').invalid && contactForm.get('message').touched" class="error">
+            Message is required.
+          </div>
+        
+          <button type="submit" [disabled]="!contactForm.valid" class="animated-button">Send Message</button>
+        </form>
+        
+      </mat-card>
+    </div>
+    
+  </section>

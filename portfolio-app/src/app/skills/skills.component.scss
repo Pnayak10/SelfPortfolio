@@ -1,0 +1,124 @@
+  
+// Skill Set Box
+
+img {
+    height: 100px;
+    width: 100px;
+    margin: 0;
+  }
+
+  .skills {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    padding: 10px;
+  }
+
+
+.skill-set-card {
+    background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    position: relative;
+    color: #f5f5f1;
+    top:10px;
+
+    // .about-me-content{
+    //   animation: scale-down linear forwards;
+    //   animation-timeline: view();
+    //   animation-range: entry 100px;
+    // }
+
+   
+    h2 {
+        text-align: center;
+    margin: 5px;
+    padding-top: 18px;
+    }
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.2rem;    
+    margin-top: 15px;
+    text-align: center;
+
+   
+    
+
+    .skill-card {
+        display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 8%;
+            padding: 16px;
+            box-shadow: 0 0 10px #a9aaab;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            border-radius: 12px;
+            transition: 0.5s ease;
+            
+    img {
+        width: 40px;
+        height: 40px;
+    }
+    }
+}
+
+.skill-card:hover {
+    background-color:#59b2f4;
+    box-shadow: 0 0 20px #59b2f4;
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    transition: all 0.5s;
+
+    img,p {
+      transform: translate3d(0%, 0, 120px);
+      font-size: 24px;
+      transition: all 0.5s;
+    }
+}
+
+@keyframes scale-down {
+    25% {scale: 2.5;}
+    55% {scale: 2;}
+    55% {scale: 1.5;}
+    100% { scale :1}
+   }
+
+
+
+   // comman css
+
+
+.heading-txt {
+    text-align: center;
+      margin-bottom: 2.75rem;
+      font-size: 10vw;
+      font-weight: 800;
+      color: rgba(0, 0, 0, 0.0784313725);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin: 25px;
+      padding-top: 25px;
+      transform: scale(1);
+      animation: 2s scale-down linear forwards;
+      animation-timeline:view(auto 250px);
+      animation-range: entry;
+  }
+  
+  
+  .heading-sub-txt{
+    position: absolute;
+      left: 0px;
+      right: -11px;
+      top: 75%;
+      font-size: 50px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #000000;
+      transform: translateY(-50%);
+      text-align: center;
+  }

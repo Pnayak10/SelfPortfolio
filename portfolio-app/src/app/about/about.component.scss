@@ -1,0 +1,92 @@
+img {
+    height: 100px;
+    width: 100px;
+    margin: 0;
+  }
+
+.about-me {
+    background: #f8faf4;
+    margin-top: 10px;
+    position: relative;
+    padding: 8px;
+    margin-top: 25px;
+  }
+  .about-me-header {
+    position: relative;
+  }
+  
+  .about-me-content{
+    display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+  
+  
+       .about-logo img{
+          width: 200px;
+          height: 200px;
+          position: relative;
+          left: 30%;
+          height: 200px;
+          mix-blend-mode: darken;
+       }
+  }
+  
+  .heading-txt {
+    text-align: center;
+      margin-bottom: 2.75rem;
+      font-size: 10vw;
+      font-weight: 800;
+      color: rgba(0, 0, 0, 0.0784313725);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin: 25px;
+      padding-top: 25px;
+      transform: scale(1);
+      animation: 2s scale-down linear forwards;
+      animation-timeline:view(auto 250px);
+      animation-range: entry;
+  }
+  
+  
+  .heading-sub-txt{
+    position: absolute;
+      left: 0px;
+      right: -11px;
+      top: 75%;
+      font-size: 50px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #000000;
+      transform: translateY(-50%);
+      text-align: center;
+  }
+  
+  
+  .about-me-content-inner {
+    padding: 20px;
+    font-size: 14px;
+    line-height: 24.783px;
+      font-weight: 400;
+      font-size: 1.125rem;
+      max-width: 799px;
+      width: 100%;
+      margin: 0 auto;
+      background: white;
+      padding: 10px;
+      transform: perspective(900px) translateY(-9%) rotateX(20deg) translateZ(0);
+      -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+      left: -16px;
+      position: relative;
+      border-radius: 10px;
+  }
+
+  @keyframes scale-down {
+    25% {scale: 2.5;}
+    55% {scale: 2;}
+    55% {scale: 1.5;}
+    100% { scale :1}
+   }
+  
