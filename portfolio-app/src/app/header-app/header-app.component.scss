@@ -107,9 +107,9 @@ background: linear-gradient(
   }
   .nav-links {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-content: center;
     align-items: center;
   }
@@ -180,7 +180,7 @@ background: linear-gradient(
     justify-content:  space-evenly;;
     padding: 50px;
     color: var(--text-color);
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-content: center;
     flex-direction: row;
   }
@@ -191,6 +191,7 @@ background: linear-gradient(
   -webkit-background-clip: text; /* Required for text gradient in WebKit browsers */
   background-clip: text; /* Standard for browsers that support it */
   color: transparent; 
+  min-width: 333px;
   }
   
   .hero-content p {
@@ -266,6 +267,7 @@ background: linear-gradient(
     width: 500px;
     height: 300px;
     position: relative;
+    left: -25px;
   }
   
   /* Info Cards */
@@ -595,6 +597,21 @@ button.lets-connect {
   55% {scale: 1.5;}
   100% { scale :1}
  }
+
+
+ @media (max-width: 768px) {
+  .hero {
+    flex-wrap:wrap !important
+  }
+
+}
+
+// @media (max-width: 768px) {
+//   .hero {
+//     flex-wrap:wrap
+//   }
+
+// }
 
 
  

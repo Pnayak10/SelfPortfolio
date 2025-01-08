@@ -60,6 +60,9 @@ img {
             cursor: pointer;
             border-radius: 12px;
             transition: 0.5s ease;
+            background: #201324;
+            color: white;
+            max-height: 70px;
             
     img {
         width: 40px;
@@ -69,8 +72,8 @@ img {
 }
 
 .skill-card:hover {
-    background-color:#59b2f4;
-    box-shadow: 0 0 20px #59b2f4;
+    background-color:#59b2f4 !important;
+    box-shadow: 0 0 20px #59b2f4 !important;
     transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
     transition: all 0.5s;
 
@@ -121,4 +124,10 @@ img {
       color: #000000;
       transform: translateY(-50%);
       text-align: center;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .skill-card {
+      width: 15% !important;
+    }
   }

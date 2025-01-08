@@ -1,5 +1,7 @@
 //planning section
-
+// * {
+//    overflow-x:;
+// }
 img {
     height: 100px;
     width: 100px;
@@ -43,14 +45,18 @@ img {
   
             .card-title {
               margin: 2px;
-              padding-bottom: 10px;
               font-size: 24px;
               font-weight: bold;
             }
+            .card-description {
+              margin: 0;
+            }
+            
           }
         }
       }
   }
+
   
   
   @media only screen and (max-width: 696px) {
@@ -67,6 +73,29 @@ img {
     
   }
   
+
+  @media only screen and (max-width: 600px) {
+    .curve-svg {
+      svg {
+        visibility: hidden;
+      }
+    }
+
+    .card-title {
+      margin-bottom: 4px !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    text-align: center;
+    }
+
+
+    .last-plan-content {
+      margin-left: 0 !important;
+      left: revert !important;
+      top:72%
+    }
+    
+  }
   .curve-svg {
     margin-bottom: 200px;
     svg {

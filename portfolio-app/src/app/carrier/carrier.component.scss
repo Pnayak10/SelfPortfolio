@@ -87,9 +87,9 @@ visibility: visible;
 }
 
 .carrier-journey .card:hover{
-  transition: height 0.6s, transform 0.6s;
-  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
-  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  transition: height 0.6s, transform 0.6s !important;
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0) !important;
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75) !important;
 
 }
 
@@ -135,3 +135,18 @@ visibility: visible;
     }
 
 }
+
+
+@media only screen and (max-width: 450px) {
+  .step {
+    width: 260px !important;
+  }
+
+  .step.acad {
+    height: 160px !important;
+  }
+
+  .step.car {
+    height: 125px !important;
+  }
+  }
