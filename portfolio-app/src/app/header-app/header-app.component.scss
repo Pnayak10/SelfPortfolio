@@ -321,7 +321,7 @@ background: linear-gradient(
     z-index: 2;
 
     animation: header-up linear forwards;
-    animation-timeline: view();
+    animation-timeline: view(auto);
     animation-range: exit;;
   }
 
