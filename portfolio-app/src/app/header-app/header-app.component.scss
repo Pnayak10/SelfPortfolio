@@ -320,9 +320,10 @@ background: linear-gradient(
     transform-origin: bottom;
     z-index: 2;
 
-    animation: header-up linear forwards;
-    animation-timeline: view(auto);
-    animation-range: exit;;
+   animation: header-up linear forwards;
+    animation-timeline: view();
+    animation-range: exit;
+    
   }
 
   .card1,.card3 {
@@ -606,6 +607,18 @@ button.lets-connect {
   100% { scale :1}
  }
 
+
+ /* Exclude styles for iPhone Safari and Chrome */
+@supports (-webkit-touch-callout: none) {
+  @media screen and (max-device-width: 820px) and (-webkit-min-device-pixel-ratio: 2) {
+    .about-me-card .card {
+     animation: none !important;
+      animation-timeline: none !important;
+      animation-range: none !important;
+      
+    }
+  }
+}
 
 
 
