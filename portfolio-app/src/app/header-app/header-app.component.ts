@@ -12,6 +12,7 @@ import { ServicesComponent } from '../services/services.component';
 import { CarrierComponent } from "../carrier/carrier.component";
 import { AboutComponent } from "../about/about.component";
 import { SkillsComponent } from '../skills/skills.component';
+import { IplComponent } from "../ipl/ipl.component";
 
 @Component({
   selector: 'header-app',
@@ -19,7 +20,7 @@ import { SkillsComponent } from '../skills/skills.component';
   imports: [CommonModule, MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatCardModule, FormsModule, ReactiveFormsModule, ContactMeComponent, PlanningComponent, ServicesComponent, CarrierComponent, AboutComponent,SkillsComponent],
+    MatCardModule, FormsModule, ReactiveFormsModule, ContactMeComponent, PlanningComponent, ServicesComponent, CarrierComponent, AboutComponent, SkillsComponent, IplComponent],
   templateUrl: './header-app.component.html',
   styleUrl: './header-app.component.scss'
 })
@@ -28,7 +29,7 @@ export class HeaderAppComponent {
   isSticky: boolean = false;
   contactForm: FormGroup | any;
 
-  @HostListener('window:scroll', ['$event'])
+  @HostListener('document:scroll', ['$event'])
   checkScroll() {
     this.isSticky = window.scrollY >= 70;
     console.log("this.isSticky", this.isSticky,window.scrollY)

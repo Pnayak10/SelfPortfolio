@@ -20,8 +20,12 @@ img {
     --theme-button-text:#f5f5f1;
   } 
   
+
+  .main {
+    padding-top:65px;
+  }
   .sticky-header {
-    position: relative;
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -37,7 +41,6 @@ img {
   .sticky-header.fadeIn {
     position: fixed !important;
     background: white !important;
-    width: 75%;
     box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
     -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
     animation: slideDown 0.9s ease-out;
@@ -57,17 +60,23 @@ img {
         }
     }
     .hire-me-btn {
-      background: linear-gradient(149deg, #192247 0%,#210e17 96.86%);
+    //  background: linear-gradient(149deg, #192247 0%,#210e17 96.86%);
       overflow: hidden;
       border-radius: 20px;
       
       box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
 
       a {
-        color: whitesmoke;
+        color: black;
       z-index: 90 !important;
       }
     } 
+
+    .hire-me-btn:hover {
+      a {
+        color: white;
+      }
+    }
 }
 
 .sticky-header.fadeout {
@@ -162,6 +171,7 @@ background: linear-gradient(
     max-height: 34px;
     max-width:  80px;
     overflow: hidden;
+    border-radius: 15px;
     a {
       text-decoration: none;
       color: #221f1f;
@@ -234,6 +244,7 @@ background: linear-gradient(
   
   .buttons {
     margin-top: 20px;
+    display: flex;
   }
 
   .buttons .hire-me {
@@ -262,11 +273,52 @@ background: linear-gradient(
     cursor: pointer;
     border-radius: 5px;
     font-weight: bold;
+    max-width: 135px;
+    max-height: 40px;
+    overflow: hidden;
+    position: relative;
+
+    a {
+      text-decoration: none;
+      color: white;
+      z-index: 90 !important;
+      position: relative;
+
+  }
+}
+
+  .buttons .download-cv::after {
+    content: "";
+  height: 65px;
+  width: 150px;
+  color:black;
+  display: block;
+  /* background: transparent; */
+  border-radius: 40%;
+  // right: 47px;
+   top: 10px;
+   right: 25px !important;
+   position: relative;
+   
+
+  transition: all ease 0.5s;
   }
   
   .buttons .download-cv:hover {
-    background-color: #e50914;
-    color: white;
+
+    a {
+      color: black;
+    }
+  }
+
+  .buttons .download-cv:hover::after {
+    content: "";
+    background: white;
+    color: black;
+    transition: all ease 0.5s;
+    top: -35px !important;
+    z-index: 9;
+    border-radius: 30%;
   }
   
   /* Hero Image */
