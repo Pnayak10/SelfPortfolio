@@ -98,17 +98,13 @@ img {
       height: 50px;
       width: 50px;
     }
-    // background: linear-gradient(to right,#7F8C8D, #000000);
-    // background:linear-gradient(-120deg, #e50914, #221f1f, #f5f5f1);
   }
 
   .content {
-    // background:linear-gradient(-120deg, #e50914, #221f1f, #f5f5f1);
 background: linear-gradient(
   149deg,
   #192247 0%,
   #210e17 96.86%);
-    // box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8); /* Stronger shadow */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
     position: relative;
   }
@@ -387,12 +383,6 @@ background: linear-gradient(
   }
 
   .card1,.card3 {
-    // background: linear-gradient(145deg, #e50914, #221f1f); /* Gradient background */
-//     background: linear-gradient(
-//   145deg,
-//   #f6605d, /* Lighter red shade */
-//   #3a3a3a  /* Softer dark gray */
-// );
 background:linear-gradient(-120deg, #e50914, #221f1f, #f5f5f1);
    
   }
@@ -400,13 +390,6 @@ background:linear-gradient(-120deg, #e50914, #221f1f, #f5f5f1);
     background: linear-gradient(145deg, #9E9E9E 60%, #e50914); /* Dark to vibrant gradient */
 }
 
-// .card3 {
-//     background:linear-gradient(-40deg, #e50914, #221f1f, #f5f5f1);
-// }
-
-// .card4 {
-//     background:linear-gradient(-340deg, #e50914, #221f1f, #f5f5f1);
-// }
 
 .card-title {
     font-size: 24px !important;
@@ -453,11 +436,7 @@ background:linear-gradient(-120deg, #e50914, #221f1f, #f5f5f1);
     height: 300px;
     transition: height 0.6s, transform 0.6s;
   }
-  
-//   .card h3 {
-//     font-size: 2rem;
-//     color: var(--primary-color);
-//   }
+
   
   .card p {
     font-size: 1rem;
