@@ -1,4 +1,14 @@
 * {
-    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+    font-family: premPopFont, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
 }
+
+@font-face {
+    font-family: 'premColFont';
+    src: url('../assets/collingar-collingar-400.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'premPopFont';
+    src: url('../assets/Poppins-Light.ttf') format('truetype');
+  }
   

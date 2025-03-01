@@ -1,3 +1,52 @@
+.round-card {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    background: url("../../assets/3dback1.jpg");
+   background-size: cover;
+
+    .card-move {
+        position: absolute;
+        width: 200px;
+        height: 250px;
+        top:10%;
+        left: calc(50% - 100px);
+        transform-style: preserve-3d;
+        transform: perspective(1000px);
+        animation: run 20s linear infinite;
+        z-index: 1;
+
+        .card-item {
+            position: absolute;
+            inset: 0 0 0 0;
+           // transform: translateZ(400px);
+            transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+                     translateZ(350px);
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+                -webkit-box-reflect: below 5px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+              //  padding-bottom: 5px;
+            }
+
+        }
+    }
+}
+
+@keyframes run {
+    
+    from {
+        transform: perspective(1000px) rotateX(-20deg) rotateY(0deg);
+    }
+    to {
+        transform: perspective(1000px) rotateX(-20deg) rotateY(360deg);
+    }
+}
+
 
 .main-card{
     display: flex;
@@ -46,6 +95,7 @@
         top:-30px
     }
 }
+
 
 .card:hover{
     transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
@@ -113,3 +163,73 @@
 .card:hover .card-inner::before, .card-inner::after {
     opacity: 1;
 }
+
+.trophy {
+    display: flex;
+        height: 70vh;
+        width: 100%;
+        position: absolute;
+        top: 24%;
+        left: calc(40% - 100px);
+        z-index: 0;
+
+    
+}
+
+// .cardcarouselrow {
+
+    .wrapper-main {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .container-main {
+        height: 400px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: start;
+        // :first-child {
+        //     width: 400px;
+        // }
+    }
+    
+    .card-main {
+        width: 80px;
+        border-radius: .75rem;
+        background-size: cover;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 2rem;
+        margin: 0 10px;
+        display: flex;
+        align-items: flex-end;
+        transition: .6s cubic-bezier(.28,-0.03,0,.99);
+        box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+
+        img {
+            height: 100%;
+        }
+    //    :first-child {
+    //         width: 400px; /* Initially expand the first div */
+    //       }
+
+      
+    }
+    .card-main:hover{
+        width: 400px;
+    }
+
+    .card-main:hover ~ div,
+    .card-main:not(:hover) {
+        width: 80px;
+    }
+
+    // .card-main:not(:hover){
+    //   //  width: 80px !important;
+
+    // }
+    
+// }

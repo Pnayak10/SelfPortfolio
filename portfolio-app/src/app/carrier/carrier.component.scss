@@ -95,6 +95,7 @@ visibility: visible;
 
 
 .card-container {
+  // background: url("../../assets/back.svg");
     display: flex;
         justify-content: space-evenly;
         padding:  0 20px;
@@ -102,7 +103,8 @@ visibility: visible;
         flex-wrap: wrap;
         align-content: center;
         align-items: center;
-        background: #f9faf5;
+       // background: #f9faf5;
+        font-family: premPopFont;
 
     //     border-image: linear-gradient(to right, #e50914 0%,#221f1f 50%,  #f5f5f1 100%) 1;
     //     // background:linear-gradient(-120deg, #e50914, #221f1f, #f5f5f1);

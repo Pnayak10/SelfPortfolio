@@ -5,7 +5,7 @@ img {
   }
 
 .about-me {
-    background: #f8faf4;
+    //background: #f8faf4;
     margin-top: 10px;
     position: relative;
     padding: 8px;
@@ -25,12 +25,13 @@ img {
   
   
        .about-logo img{
-          width: 200px;
-          height: 200px;
-          position: relative;
-          left: 20%;
-          height: 200px;
-          mix-blend-mode: darken;
+        width: 15vw;
+        height: 200px;
+        position: relative;
+        left: 20%;
+        height: 200px;
+        /* mix-blend-mode: initial; */
+        border-radius: 50%;
        }
   }
   
@@ -39,29 +40,30 @@ img {
       margin-bottom: 2.75rem;
       font-size: 10vw;
       font-weight: 800;
-      color: rgba(0, 0, 0, 0.0784313725);
+      // color: rgba(0, 0, 0, 0.0784313725);
+      color: #fff;
       letter-spacing: 4px;
       text-transform: uppercase;
       margin: 25px;
-      padding-top: 25px;
+     // padding-top: 25px;
       transform: scale(1);
       animation: 2s scale-down linear forwards;
-      animation-timeline:view(auto 250px);
+      animation-timeline:view(auto 150px);
       animation-range: entry;
   }
   
   
   .heading-sub-txt{
     position: absolute;
-      left: 0px;
-      right: -11px;
-      top: 75%;
-      font-size: 50px;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: #000000;
-      transform: translateY(-50%);
-      text-align: center;
+    left: 0px;
+    right: -5px;
+    top: 70%;
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #6a57e3;
+    transform: translateY(-50%);
+    text-align: center;
   }
   
   
@@ -71,6 +73,7 @@ img {
     line-height: 24.783px;
       font-weight: 400;
       font-size: 1.125rem;
+      font-family: premPopFont;
       max-width: 799px;
       width: 80%;
       margin: 0 auto;
